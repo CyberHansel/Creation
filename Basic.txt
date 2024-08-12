@@ -1,0 +1,1 @@
+We need int main(void) { Function if we want to 
