@@ -1,1 +1,23 @@
-We need int main(void) { Function if we want to 
+Binary Patterns
+Programming language and its compiler or interpreter might leave "footprints" in the compiled binary. Example:
+>>> C/C++: binaries have standard library functions (like memcpy, strcpy, etc.) and a specific calling convention.
+>>> Rust: The Rust compiler inserts specific patterns related to memory safety checks and includes the Rust standard library
+>>> Go: Go binaries often include its runtime (garbage collector, goroutines) and might have info about Go runtime.
+
+Function Signatures
+The presence of certain functions or libraries (like mainCRTStartup for C/C++, or __libc_start_main in Linux binaries.
+
+Runtime and Libraries
+Some languages include a runtime that must be packaged with the executable:
+>>> .NET languages (C#, VB.NET): Require the .NET runtime dependencies in the binary can be a giveaway.
+>>> Java require Java Virtual Machine (JVM), though they can be packaged into native executables with tools like GraalVM or launch4j.
+>>> Go: Go binaries include the Go runtime (goroutines, garbage collection), that are embedded in the executable.
+>>> External Libraries: certain libraries can indicate language, like libstdc++ might indicate C++, while libgo could suggest Go
+
+Disassemblers and Decompilers
+IDA Pro, Ghidra, and Binary Ninja - translate machine code back into assembly language
+x86 Assembly: Used for Intel and AMD processors.
+ARM Assembly: Used in many mobile devices and embedded systems.
+
+Dynamic Linking
+Windows and Linux have different dynamic linking mechanisms. Windows uses .dll files, while Linux uses .so (shared object) files.
